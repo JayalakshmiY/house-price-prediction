@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangaluru Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script><!--to perform jquery operation-->
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="img"></div>
+    <form action="" class="form" method="post">
+        <h2>Area(Square Feet)</h2>
+        <input class='area' type="text" id="sqft" name="Squareft" value="1000">
+        <h2>BHK</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-bhk-1" name="bhk" value="1">
+            <label for="radio-bhk-1">1</label>
+            <input type="radio" id="radio-bhk-2" name="bhk" value="2" checked>
+            <label for="radio-bhk-2">2</label>
+            <input type="radio" id="radio-bhk-3" name="bhk" value="1">
+            <label for="radio-bhk-3">3</label>
+            <input type="radio" id="radio-bhk-4" name="bhk" value="1">
+            <label for="radio-bhk-4">4</label>
+            <input type="radio" id="radio-bhk-5" name="bhk" value="1">
+            <label for="radio-bhk-5">5</label>
+        </div>
+ 
+        <h2>Bath</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-bath-1" name="bathrooms" value="1">
+            <label for="radio-bath-1">1</label>
+            <input type="radio" id="radio-bath-2" name="bathrooms" value="2" checked>
+            <label for="radio-bath-2">2</label>
+            <input type="radio" id="radio-bath-3" name="bathrooms" value="1">
+            <label for="radio-bath-3">3</label>
+            <input type="radio" id="radio-bath-4" name="bathrooms" value="1">
+            <label for="radio-bath-4">4</label>
+            <input type="radio" id="radio-bath-5" name="bathrooms" value="1">
+            <label for="radio-bath-5">5</label>
+        </div>
+
+        <h2>Balcony</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-balcony-1" name="balcony" value="1">
+            <label for="radio-balcony-1">1</label>
+            <input type="radio" id="radio-balcony-2" name="balcony" value="2" checked>
+            <label for="radio-balcony-2">2</label>
+            <input type="radio" id="radio-balcony-3" name="balcony" value="1">
+            <label for="radio-balcony-3">3</label>
+            <input type="radio" id="radio-balcony-4" name="balcony" value="1">
+            <label for="radio-balcony-4">4</label>
+            <input type="radio" id="radio-balcony-5" name="balcony" value="1">
+            <label for="radio-balcony-5">5</label>
+        </div>
+   
+    
+    <div>
+        <h2>Location</h2>
+    </div>
+    <select class="location" name="location" id="loc" >
+        <option name="location" value="" disabeld="disabled" selected="selected">Choose a location</option>
+        <option name="location" value="">Electronic city</option>
+        <option name="location" value="">Rajaji Nagar</option><!--we can dynamically populate using js -->
+    </select>
+    <div>
+        <form action="" class="form" method="post">
+        <button class="submit" onclick="onClickedEstimatedPrice();return false" type="'submit">Estimated Price</button>
+        <div  class="result" id="EstimatedPrice">
+            <h2></h2>
+        </div>
+    </form>
+    </div>
+ </form>
+</body>
+</html>
